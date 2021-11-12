@@ -24,14 +24,16 @@
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41"></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>   
                 </ul>
-                <span class="navbar-text">
-                    
-                </span>
+                <ul class="navbar-nav justify-content-end">
+                    <li class="nav-item active"> <a id="Login" class="nav-link" href="#"><span class="fa fa-sign-in fa-lg"></span> Login</a></li>
+                </ul>
+                <!-- <span class="navbar-text"></span> -->
+                
             </div>
         </div>
     </nav>
@@ -40,70 +42,102 @@
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Reserve a Table</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
                 <div class="modal-body">
-                 <!-- <div id="reserve" class="card align-self-center"> -->
-                    <h3 class="card-header">Reserve a Table</h3>
-                    <div  class="col-8">
+                    <div>
                         <form>
                             <div class="form-group row">
-                                <div><label for="Num" class="col-md-12 col-form-label">Number of Guest</label></div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
-                                    <label class="form-check-label" for="inlineCheckbox1">1</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
-                                    <label class="form-check-label" for="inlineCheckbox1">2</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
-                                    <label class="form-check-label" for="inlineCheckbox1">3</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
-                                    <label class="form-check-label" for="inlineCheckbox1">4</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
-                                    <label class="form-check-label" for="inlineCheckbox1">5</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
-                                    <label class="form-check-label" for="inlineCheckbox1">6</label>
+                                <div class="col-md-3"><label for="Num" class="col-form-label">Number of Guest</label></div>
+                                <div class="col-md-9">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">5</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">6</label>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="form-group row">
-                                <div class="btn-group" role="group">
-                                    <div><label for="section" class="col-md-12 col-form-label">Section</label></div>
+                                <div class="col-md-3"><label for="section" class="col-form-label">Section</label></div>
+                                <div class="btn-group col-md-9" role="group">  
                                     <button type="button" class="btn btn-primary active">Non-Smoking</button>
                                     <button type="button" class="btn btn-danger">Smoking</button>
                                   </div>
                             </div>
 
                             <div class="form-group row">
-                                <div><label for="lastname" class="col-md-12 col-form-label">Date and Time</label></div>
-                                <div>
-                                    <input type="date" class="form-control" id="Date" name="Date" placeholder="Date">
+                                <div class="col-md-3"><label for="lastname" class="col-form-label">Date and Time</label></div>
+                                <div class="form-inline">
+                                    <div class="col-sm-6"><input type="date" class="form-control" id="Date" name="Date" placeholder="Date"></div>
+                                    <div class="col-sm-6"><input type="time" class="form-control" id="Time" name="Time" placeholder="Time"></div>
                                 </div>
-                                <div>
-                                    <input type="time" class="form-control" id="Time" name="Time" placeholder="Time">
+                            </div>                        
+                        </form>
+                     </div>
+
+                    <div class="modal-footer">
+                        <button type="cancel" class="btn btn-secondary">Cancle</button>
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Reserve</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="LoginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <form>
+                            <div class="form-inline">
+                                <div class="form-group mb-2">
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
                                 </div>
-                            
-                            </div>
-                        </div>
-                            <div class="form-group row">
-                                <div class="offset-md-2 col-md-10">
-                                    <button type="cancel" class="btn btn-secondary">
-                                        Cancle
-                                    </button>
-                                    <button type="submit" class="btn btn-primary">
-                                        Reserve
-                                    </button>
+                                <div class="form-group mx-sm-3 mb-2">
+                                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                </div>
+                                <div class="form-group mx-sm-3 mb-2">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
                                 </div>
                             </div>
                         </form>
-                    <!-- </div> -->
-                          
+                     </div>
+
+                    <div class="modal-footer">
+                        <button type="cancel" class="btn btn-secondary">Cancle</button>
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Reserve</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,7 +155,7 @@
                 </div>
 
                 <div class="col-12 col-sm align-self-center">
-                    <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#ReserveModal">Reserve Table</button>
+                    <button id="Reserve" type="button" class="btn btn-warning btn-lg">Reserve Table</button>
                 </div>
             </div>
         </div>
@@ -283,6 +317,7 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
+        //carousel script
         $(document).ready(function(){
             $("#mycarousel").carousel( { interval: 1000 } ); //time of change
             $("#carouselButton").click(function(){
@@ -298,6 +333,15 @@
                 }
             });
         });
+
+        //modal script
+        $('#Login').on('click', function () {
+            $('#LoginModal').modal('show')
+        })
+
+        $('#Reserve').on('click', function () {
+            $('#ReserveModal').modal('show')
+        })
     </script>
 </body>
 
