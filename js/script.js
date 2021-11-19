@@ -1,6 +1,9 @@
-<script>
+
     $(document).ready(function(){
-        $("#mycarousel").carousel( { interval: 1000 } ); //time of change
+        $("#mycarousel").carousel( {
+             interval: 1000 
+            } ); //time of change
+            
         $("#carouselButton").click(function(){
             if ($("#carouselButton").children("span").hasClass('fa-pause')) {
                 $("#mycarousel").carousel('pause');
@@ -13,13 +16,16 @@
                 $("#carouselButton").children("span").addClass('fa-pause');                    
             }
         });
+
     });
 
+    
     $('#Login').on('click', function () {
         $('#LoginModal').modal('show')
-    })
+    });
+
 
     $('#Reserve').on('click', function () {
         $('#ReserveModal').modal('show')
-    })
-</script>
+    });
+
